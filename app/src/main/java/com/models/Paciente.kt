@@ -1,11 +1,11 @@
 package com.models
 
-class Paciente {
-    var pacienteId:Int = 0
-    var nombre:String? = null
-    var dni:Long? = null
-    var edad:Int? = null
-    var correo:String? = null
-    var telefono:Long? = null
-    var celular:Long? = null
+class Paciente(){
+    var pacienteId = 0
+    var nombre = ""
+    var dni = 0
+    var edad = 0
+    var correo = ""
+    var telefono = 0
+    var celular = 0
 }
