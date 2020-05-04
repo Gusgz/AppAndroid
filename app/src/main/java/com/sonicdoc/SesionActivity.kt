@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.EditText
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_sesion.*
 import com.models.Paciente
 import com.util.SharedPreference
@@ -20,13 +21,19 @@ class SesionActivity : AppCompatActivity() {
             intent.putExtra("KeySesion",sharedPreference.getValueString("Nombre"))
             startActivity(intent)
         }
-        btnIngresar.setOnClickListener{
-            val intent = Intent(this,MainActivity::class.java)
-            var paciente = Paciente()
-            paciente.nombre = edNombre.text.toString()
-            sharedPreference.save("Nombre",paciente.nombre)
-            intent.putExtra("KeySesion",paciente.nombre)
-            startActivity(intent)
-        }
+
+            btnIngresar.setOnClickListener {
+                var paciente = Paciente()
+                paciente.nombre = edNombre.text.toString()
+                if(sharedPreference.getValueString("Nombre")== null && paciente.nombre==""){
+                    Toast.makeText(this,"Ingresar Datos",Toast.LENGTH_LONG).show()
+                }else {
+                    sharedPreference.save("Nombre", paciente.nombre)
+                    val intent = Intent(this, MainActivity::class.java)
+                    intent.putExtra("KeySesion", paciente.nombre)
+                    startActivity(intent)
+                }
+            }
+
     }
 }
