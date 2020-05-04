@@ -23,5 +23,16 @@ class MainActivity : AppCompatActivity() {
             textView.text = text
 
         }
+        //Cierre de Sesion
+        val sharedPreference = SharedPreference(this)
+        if(sharedPreference.getValueString("Nombre")!=null){
+        btnLogOut.setOnClickListener(){
+           val intent = Intent(this,SesionActivity::class.java)
+                sharedPreference.removeValue("Nombre")
+                Toast.makeText(this,"Ha Cerrado Sesion",Toast.LENGTH_LONG).show()
+               startActivity(intent)
+            }
+        }
+
     }
 }
