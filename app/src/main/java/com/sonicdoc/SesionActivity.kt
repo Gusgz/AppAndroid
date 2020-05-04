@@ -9,7 +9,6 @@ import com.models.Paciente
 import com.util.SharedPreference
 
 class SesionActivity : AppCompatActivity() {
-    val editTextPaciente:EditText = findViewById(R.id.edNombre)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sesion)
