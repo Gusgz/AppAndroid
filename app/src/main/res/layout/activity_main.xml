@@ -30,7 +30,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btnMedico"
+        android:id="@+id/btnMedicos"
         android:layout_width="120dp"
         android:layout_height="40dp"
         android:layout_marginStart="50dp"
@@ -47,7 +47,7 @@
         android:layout_marginTop="50dp"
         android:text="Fecha"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnMedico" />
+        app:layout_constraintTop_toBottomOf="@+id/btnMedicos" />
 
     <TextView
         android:id="@+id/textView"
@@ -64,8 +64,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
         android:text="Medico"
-        app:layout_constraintBaseline_toBaselineOf="@+id/btnMedico"
-        app:layout_constraintStart_toEndOf="@+id/btnMedico" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnMedicos"
+        app:layout_constraintStart_toEndOf="@+id/btnMedicos" />
 
     <TextView
         android:id="@+id/tvFecha"

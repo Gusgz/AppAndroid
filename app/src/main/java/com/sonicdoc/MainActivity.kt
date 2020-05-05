@@ -33,6 +33,15 @@ class MainActivity : AppCompatActivity() {
                startActivity(intent)
             }
         }
-
+        // btnMedico
+        btnMedicos.setOnClickListener{
+            val intent = Intent(this,MedicoActivity::class.java)
+            startActivity(intent)
+        }
+        // btnEspecialidad
+        btnEspecialidad.setOnClickListener{
+            val intent = Intent(this,EspecialidadActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
