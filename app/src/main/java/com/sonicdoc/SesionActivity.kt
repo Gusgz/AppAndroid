@@ -43,9 +43,6 @@ class SesionActivity : AppCompatActivity() {
                     startActivity(intent)
                 }
             }
-        btnLoad.setOnClickListener{
-            loadUsuario()
-        }
     }
     private fun loadUsuario(){
         // https://localhost:44348/
